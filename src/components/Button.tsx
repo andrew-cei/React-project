@@ -1,8 +1,10 @@
 interface ButtonProps {
     variant?: "primary" | "outline" | "destructive";
+    children: string;
+    rounded: boolean | undefined;
 }
 
-export const Button = ({variant="primary",children, rounded=false}) => {
+export const Button = ({variant="primary",children, rounded=false}: ButtonProps) => {
     let className = "rounded-md "
     // Estilo redondeado
     if (rounded === true){
